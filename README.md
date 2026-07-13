@@ -1,9 +1,7 @@
 <h1 align="center">🎫 Sistema de Chamados</h1>
 
 <p align="center">
-  Aplicação web full stack para registro e gerenciamento de solicitações de suporte (chamados),
-  desenvolvida como Atividade Prática da disciplina <strong>TMS1391 – Desenvolvimento Web em HTML5, CSS, JavaScript e PHP</strong>
-  do curso de Análise e Desenvolvimento de Sistemas do Centro Universitário Newton Paiva.
+  Aplicação web full stack para registro e gerenciamento de solicitações de suporte (chamados).
 </p>
 
 <p align="center">
