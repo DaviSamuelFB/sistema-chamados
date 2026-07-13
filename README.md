@@ -148,16 +148,6 @@ sistema-chamados/
 
 ---
 
-## 🎓 Contexto acadêmico
-
-- **Instituição:** Centro Universitário Newton Paiva
-- **Curso:** Análise e Desenvolvimento de Sistemas
-- **Disciplina:** TMS1391 – Desenvolvimento Web em HTML5, CSS, JavaScript e PHP
-- **Turma:** 3001
-- **Professor:** Luis Augusto
-
----
-
 ## 📩 Contato
 
 Desenvolvido por **Davi Samuel Ferreira Bego**.
