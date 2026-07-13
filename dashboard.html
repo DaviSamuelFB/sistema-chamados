@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área do usuário – Sistema de Chamados</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="dashboard">
+
+  <!-- ========================================================
+       ÁREA DO USUÁRIO
+       ======================================================== -->
+  <div class="card-main card-wide">
+
+    <!-- Cabeçalho -->
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:24px;">
+      <div>
+        <h1 class="screen-title mb-0">Olá, <span id="nomeUsuario">…</span></h1>
+        <p class="screen-subtitle mb-0">Bem-vindo à sua área pessoal</p>
+      </div>
+      <button onclick="fazerLogout()" class="btn-sm-outline" style="margin-top:4px;">Sair</button>
+    </div>
+
+    <!-- Seção Meus dados -->
+    <div class="data-section">
+      <div class="data-section-header">
+        <span class="data-section-title">Meus dados</span>
+        <button id="btnEditarDados" class="link-accent" style="background:none;border:none;padding:0;cursor:pointer;">
+          Editar
+        </button>
+      </div>
+
+      <div class="data-row">
+        <span class="data-row-key">Nome</span>
+        <span class="data-row-val" id="dadoNome">—</span>
+      </div>
+      <div class="data-row">
+        <span class="data-row-key">Email</span>
+        <span class="data-row-val" id="dadoEmail">—</span>
+      </div>
+      <div class="data-row">
+        <span class="data-row-key">Telefone</span>
+        <span class="data-row-val" id="dadoTelefone">—</span>
+      </div>
+      <div class="data-row">
+        <span class="data-row-key">CPF</span>
+        <span class="data-row-val" id="dadoCPF">—</span>
+      </div>
+    </div>
+
+    <!-- Estatísticas de chamados -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-label">Chamados abertos</div>
+        <div class="stat-value" id="qtdAbertos">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total de chamados</div>
+        <div class="stat-value" id="qtdTotal">—</div>
+      </div>
+    </div>
+
+    <!-- Ações -->
+    <div class="col-2">
+      <button id="btnNovoChamado" class="btn-primary-custom mb-0">Abrir novo chamado</button>
+      <button id="btnVerChamados" class="btn-outline-custom mb-0">Ver meus chamados</button>
+    </div>
+
+  </div><!-- /card-main -->
+
+  <!-- ========================================================
+       MODAL: Editar dados do usuário
+       ======================================================== -->
+  <div id="modalEditar" class="modal-overlay">
+    <div class="modal-box">
+
+      <h2 class="screen-title" style="font-size:1.4rem; margin-bottom:4px;">Editar dados</h2>
+      <p class="screen-subtitle">Atualize suas informações pessoais</p>
+
+      <div id="alertEditar" class="alert-box"></div>
+
+      <form id="formEditar" novalidate>
+
+        <div class="mb-3">
+          <label for="editNome" class="form-label">Nome completo</label>
+          <input type="text" id="editNome" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="editEmail" class="form-label">Email</label>
+          <input type="email" id="editEmail" class="form-control" required />
+        </div>
+
+        <div class="col-2 mb-3">
+          <div>
+            <label for="editTelefone" class="form-label">Telefone</label>
+            <input type="tel" id="editTelefone" class="form-control" maxlength="16" required />
+          </div>
+          <div>
+            <label for="editCPF" class="form-label">CPF</label>
+            <input type="text" id="editCPF" class="form-control" maxlength="14" inputmode="numeric" required />
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="editSenha" class="form-label">
+            Nova senha <span style="color:var(--text-muted); font-weight:400;">(deixe em branco para manter)</span>
+          </label>
+          <input type="password" id="editSenha" class="form-control" placeholder="••••••••" autocomplete="new-password" />
+        </div>
+
+        <div class="col-2">
+          <button type="button" onclick="fecharModalEditar()" class="btn-outline-custom mb-0">Cancelar</button>
+          <button type="submit" class="btn-primary-custom mb-0">Salvar alterações</button>
+        </div>
+
+      </form>
+    </div>
+  </div><!-- /modalEditar -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
